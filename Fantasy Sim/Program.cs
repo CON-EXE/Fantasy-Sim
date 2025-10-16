@@ -1,4 +1,5 @@
 ﻿using Fantasy_Sim.Characters;
+using Fantasy_Sim.Game;
 
 namespace Fantasy_Sim {
     internal class Program {
@@ -7,8 +8,11 @@ namespace Fantasy_Sim {
 
             ICharacter character = factory.CreateCharacter();
 
-            Console.WriteLine(character.Type());
-            character.UseAbility1();
+            GameState.GetInstance().AddCharacter(factory.CreateCharacter());
+            Console.WriteLine(GameState.GetInstance().Characters[0].Type());
+
+            //Console.WriteLine(character.Type());
+            //character.UseAbility1();
         }
     }
 }
