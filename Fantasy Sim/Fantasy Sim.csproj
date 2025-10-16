@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Inventory\" />
     <Folder Include="Skills\" />
   </ItemGroup>
 
