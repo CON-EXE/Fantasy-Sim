@@ -6,9 +6,7 @@ namespace Fantasy_Sim.Characters {
         int Health();
         int Attack();
         int Defense();
+        int Mana();
         IEnumerable<INewSkill> Skills();
-        void UseAbility1();
-        void UseAbility2();
-        void UseAbility3();
     }
 }

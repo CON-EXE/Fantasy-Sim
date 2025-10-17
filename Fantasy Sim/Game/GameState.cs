@@ -1,5 +1,5 @@
 ﻿using Fantasy_Sim.Characters;
-using System;
+using Fantasy_Sim.Skills;
 
 namespace Fantasy_Sim.Game {
     public class GameState {
@@ -20,6 +20,7 @@ namespace Fantasy_Sim.Game {
         }
 
         public List<ICharacter> Characters { get; set; } = new List<ICharacter>();
+        public List<INewSkill> Skills { get; set; } = new List<INewSkill>();
         public int Level { get; set; } = 1;
         public string Environment { get; set; }
 
@@ -32,6 +33,16 @@ namespace Fantasy_Sim.Game {
             if(character != null) {
                 Characters.Add(character);
             }
+        }
+
+        public void AddSkill(INewSkill skill) {
+            if(skill != null) {
+                Skills.Add(skill);
+            }
+        }
+
+        public void IncreaseLevel() {
+            Level++;
         }
     }
 }
