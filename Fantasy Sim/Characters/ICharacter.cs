@@ -7,6 +7,8 @@ namespace Fantasy_Sim.Characters {
         int Attack();
         int Defense();
         int Mana();
-        IEnumerable<INewSkill> Skills();
+        List<INewSkill> Skills { get; set; }
+        void AddSkill(INewSkill skill);
+        void UseSkill(string skillName);
     }
 }

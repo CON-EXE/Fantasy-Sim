@@ -22,11 +22,10 @@ namespace Fantasy_Sim.Game {
         public List<ICharacter> Characters { get; set; } = new List<ICharacter>();
         public List<INewSkill> Skills { get; set; } = new List<INewSkill>();
         public int Level { get; set; } = 1;
-        public string Environment { get; set; }
+        public string Environment { get; set; } = "Thick Forsets";
 
-        public void SetEnvironment() {
-            Console.Write("Enter Environment Details: ");
-            Environment = Console.ReadLine();
+        public void SetEnvironment(string input) {
+            Environment = input;
         }
 
         public void AddCharacter(ICharacter character) {
